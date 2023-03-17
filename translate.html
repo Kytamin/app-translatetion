@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transtale</title>
+</head>
+<body>
+<div>
+    <textarea id="english"></textarea>
+    <input value="dịch" id="translate" type="button" onclick="handle()">
+    <textarea id="result"></textarea>
+</div>
+</body>
+<script>
+    function handle() {
+        let english = ["glory", "hello", "topup", "king", "golden"]
+        let vietnamese = ["vinh quang", "xin chào", " nạp tiền", "vua", "vàng"]
+        let str = document.getElementById("english").value
+        let result = ""
+        for (let i = 0; i < english.length; i++) {
+            if (str === english[i]) {
+                for (let j = 0; j < vietnamese.length; j++) {
+                    if (i===j){
+                        result=vietnamese[j]
+                    }
+                }
+            }
+        }  document.getElementById("result").innerHTML=result
+    }
+
+
+</script>
+</html>
